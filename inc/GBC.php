@@ -110,7 +110,12 @@ function themeConfig($form)
 </form>';
             ?>
         </div>
-<br><br>
+<br><br><hr>
+<p>
+    <b>开源地址：</b><a href="https://gitee.com/ShuShuicu/typecho-miomoe-theme-v4">Gitee</a> · <a href="https://github.com/ShuShuicu/typecho-miomoe-theme-v4">GitHub</a>
+    <br><b>联系作者：</b><a href="https://space.bilibili.com/435502585">哔哩哔哩</a> · <a href="https://blog.miomoe.cn/">鼠子Blog</a>
+</p>
+<hr>
 <?php
     // 色调
     $themePrimary = new Typecho_Widget_Helper_Form_Element_Select(
@@ -185,7 +190,7 @@ function themeConfig($form)
         ),
         'https://weavatar.com/avatar/',
         _t('Avatar'),
-        _t('请选择Avatar源，用于评论头像展示。')
+        _t('请选择Avatar源，用于评论头像展示。<hr>')
     );
     $form->addInput($avatarCdn);
     // 副标题
@@ -230,9 +235,18 @@ function themeConfig($form)
         NULL,
         '' . THEME_URL . '/assets/images/avatar.jpg',
         _t('作者头像'),
-        _t('请填入作者头像链接，没有则显示神鹰黑手哥。')
+        _t('请填入作者头像链接，没有则显示神鹰黑手哥。<hr>')
     );
     $form->addInput($avatarUrl);
+    // Drive目录
+    $driveDir = new Typecho_Widget_Helper_Form_Element_Text(
+        'driveDir',
+        NULL,
+        'files',
+        _t('MioDrive'),
+        _t('Drive功能文件目录，默认为 主题目录/inc/drive/ 下的 files 文件夹。<hr>')
+    );
+    $form->addInput($driveDir);
     // 版权声明
     $postCopyright = new Typecho_Widget_Helper_Form_Element_Textarea(
         'postCopyright',

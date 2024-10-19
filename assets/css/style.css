@@ -28,6 +28,9 @@ body .mdui-card {
 body .mdui-card {
     background-color: #ffffffde;
 }
+body .mdui-theme-layout-dark .mdui-card {
+    background-color: #424242f5;
+}
 a {
     color: unset;
     text-decoration: unset;

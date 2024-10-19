@@ -24,6 +24,19 @@ document.body.oncopy = function () {
     });
 })();
 
+// piciv
+function checkInput() {
+    text = document.getElementById("inputer").value;
+    type_pic = document.getElementsByName("tp");
+    for(var i=0; i<3; i++) {
+        if(type_pic[i].checked) {
+            type = type_pic[i].value;
+        }
+    }
+    image_e = document.getElementById('image');
+    image_e.src = "https://i0.wp.com/pixiv.re/" + text + "." + type;
+}
+
 // 主题样式
 // 切换主题并保存
 // 主题切换函数

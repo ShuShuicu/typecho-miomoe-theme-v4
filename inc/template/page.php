@@ -13,7 +13,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </div>
         <div class="mdui-divider"></div>
     </div>
-    <div class="mdui-card-content">
+    <div class="mdui-typo mdui-card-content post-container">
         <?php $this->content(); ?>
     </div>
 </div>
