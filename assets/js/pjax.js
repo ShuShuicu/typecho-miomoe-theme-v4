@@ -7,7 +7,7 @@ $(document).pjax('a[href^="' + window.location.origin + '"]:not(a[target="_blank
     NProgress.start(); // 加载动画效果开始
     $(document).on('pjax:complete', function() {
         NProgress.done(); // 加载动画效果结束
-
+        $(document).on('click', '#toggleTheme', toggleThemeFunction);
         // 重载
         ViewImage();
 

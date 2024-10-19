@@ -57,6 +57,9 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <a href="<?php $this->options->siteUrl()?>?random=true" class="mdui-btn mdui-btn-icon">
                 <i class="mdui-icon material-icons">book</i>
             </a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" id="toggleTheme">
+                <i class="mdui-icon material-icons">brightness_6</i>
+            </a>
         </div>
     </div>
 

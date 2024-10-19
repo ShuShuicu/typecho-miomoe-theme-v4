@@ -40,7 +40,7 @@ function toggleThemeFunction() {
             localStorage.setItem('theme', 'mdui-theme-layout-light');
             mdui.snackbar({
                 message: '当前为：浅色模式',
-                position: 'left-bottom',
+                position: 'right-bottom',
             });
             break;
         case 'mdui-theme-layout-light':
@@ -48,7 +48,7 @@ function toggleThemeFunction() {
             localStorage.setItem('theme', 'mdui-theme-layout-dark');
             mdui.snackbar({
                 message: '当前为：深色模式',
-                position: 'left-bottom',
+                position: 'right-bottom',
             });
             break;
         case 'mdui-theme-layout-dark':
@@ -56,7 +56,7 @@ function toggleThemeFunction() {
             localStorage.setItem('theme', 'mdui-theme-layout-auto');
             mdui.snackbar({
                 message: '当前为：自动模式',
-                position: 'left-bottom',
+                position: 'right-bottom',
             });
             break;
     }
@@ -64,7 +64,6 @@ function toggleThemeFunction() {
 
 // 为toggleTheme和toggleThemeFooter元素添加事件监听器
 document.getElementById('toggleTheme').addEventListener('click', toggleThemeFunction);
-document.getElementById('toggleThemeFooter').addEventListener('click', toggleThemeFunction); // 新增的部分
 
 // 加载主题设置
 document.addEventListener('DOMContentLoaded', function () {
