@@ -13,7 +13,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     </div>
     <footer id="bottom" style="margin-top: auto;">
         <div class="mdui-valign">
-            <img class="mdui-center" src="<?php echo get_assetUrl('images/end.png'); ?>"></img>
+            <img class="mdui-center mdui-img-fluid" src="<?php echo get_assetUrl('images/end.png'); ?>"></img>
         </div>
         <div class="mdui-card">
             <div class="mdui-container">

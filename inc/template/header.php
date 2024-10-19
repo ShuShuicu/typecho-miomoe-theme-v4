@@ -30,10 +30,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <div id="app">
     <div class="mdui-appbar mdui-appbar-fixed">
         <div class="mdui-toolbar mdui-color-theme">
-            <a href="<?php $this->options->siteUrl()?>?random=true" class="mdui-btn mdui-btn-icon">
-                <i class="mdui-icon material-icons">book</i>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#menu'}">
+                <i class="mdui-icon material-icons">menu</i>
             </a>
-            <a href="<?php $this->options->siteUrl()?>" class="mdui-typo-headline"><?php $this->options->title(); ?></a>
+            <a href="<?php $this->options->siteUrl()?>" class="mdui-typo-headline mdui-hidden-xs"><?php $this->options->title(); ?></a>
             <a href="javascript:;" class="mdui-typo-title">
                 <?php
                 if (empty($this->getArchiveTitle())) {
@@ -51,22 +51,12 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 ?>
             </a>
             <div class="mdui-toolbar-spacer"></div>
-            <div class="mdui-typo-title">
-                <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#搜索'}">
-                    <i class="mdui-icon material-icons">search</i>
-                </a>
-                <?php if ($this->is('post') || $this->is('page') || $this->is('single') || $this->is('tag') || $this->is('category') || $this->is('author') || $this->is('search')): ?>
-                    <a href="<?php $this->options->siteUrl()?>" class="mdui-hidden-sm-down">
-                        「返回首页」
-                    </a>
-                <?php endif; ?>
-                <a href="<?php $this->options->siteUrl()?>" class="mdui-hidden-sm-down" mdui-dialog="{target: '#分类列表'}">
-                    「分类列表」
-                </a>
-                <a href="javascript:;" class="mdui-hidden-md-up mdui-btn mdui-btn-icon" mdui-drawer="{target: '#drawer'}">
-                    <i class="mdui-icon material-icons">menu</i>
-                </a>
-            </div>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#搜索'}">
+                <i class="mdui-icon material-icons">search</i>
+            </a>
+            <a href="<?php $this->options->siteUrl()?>?random=true" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">book</i>
+            </a>
         </div>
     </div>
 
@@ -90,10 +80,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </div>
     </div>
 
-    <div class="mdui-dialog" id="分类列表">
-        <div class="mdui-dialog-title mdui-text-truncate">分类列表<small> · 本站的所有分类</small></div>
+    <div class="mdui-dialog" id="menu">
+        <div class="mdui-dialog-title mdui-text-truncate">菜单<small> · 本站的所有分类</small></div>
         <div class="mdui-divider"></div>
         <div class="mdui-dialog-content mdui-text-center">
+            <div class="mdui-chip"><a target="_blank" href="<?php $this->options->siteUrl()?>">
+                    <span class="mdui-chip-icon mdui-color-theme"><i class="mdui-icon material-icons">home</i></span>
+                    <span class="mdui-chip-title">网站首页</span>
+                </a></div>
             <?php $this->widget('Widget_Metas_Category_List')->parse('
             <div class="mdui-chip"><a target="_blank" href="{permalink}">
                 <span class="mdui-chip-icon mdui-color-theme"><i class="mdui-icon material-icons">folder</i></span>
@@ -109,6 +103,4 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>
         </div>
     </div>
-
-    <?php require 'sidebar-nav.php';?>
     <div class="mdui-container mdui-m-y-3" id="content">
