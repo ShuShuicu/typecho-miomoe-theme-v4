@@ -170,9 +170,9 @@ function themeConfig($form)
         array(
             'default' => _t('本地'),
             'https://ss.bscstorage.com/wpteam-shushuicu/assets/themes/MioV4/'=> _t('⭐️白山云⭐️'),
-            'https://cdn.jsdmirror.com/gh/ShuShuicu/typecho-miomoe-theme-v3@master/assets/'=> _t('⭐️JsdMirror⭐️'),
-            'https://cdn.jsdelivr.net/gh/ShuShuicu/typecho-miomoe-theme-v3@master/assets/'=> _t('JsDelivr(官方源'),
-            // 'https://jsdelivr.shushu.icu/gh/ShuShuicu/typecho-miomoe-theme-v3@master/assets/'=> _t('JsDelivr(鼠子源',
+            'https://cdn.jsdmirror.com/gh/ShuShuicu/typecho-miomoe-theme-v4@master/assets/'=> _t('⭐️JsdMirror⭐️'),
+            'https://cdn.jsdelivr.net/gh/ShuShuicu/typecho-miomoe-theme-v4@master/assets/'=> _t('JsDelivr(官方源'),
+            // 'https://jsdelivr.shushu.icu/gh/ShuShuicu/typecho-miomoe-theme-v4@master/assets/'=> _t('JsDelivr(鼠子源',
         ),
         'default',
         _t('CDN'),

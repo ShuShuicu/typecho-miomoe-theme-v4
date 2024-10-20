@@ -3,7 +3,7 @@
  * MioV4，采用全新写法轻量级的Typecho博客主题。
  * @package MioV4
  * @author 鼠子(ShuShuicu)
- * @version 1.0.2
+ * @version 1.1.0
  * @link https://blog.miomoe.cn/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
